@@ -21,9 +21,11 @@ def get_delivery_info(the_file):
     the_file.close()
 
 def get_daily_delivery_info(delivery_days):
+    counter = 1
     for day in delivery_days:
-        print (day)
+        print (f"Day {counter}:")
         get_delivery_info(day)
+        counter += 1
 
 
 get_daily_delivery_info(delivery_days)
