@@ -3,6 +3,7 @@ day_1 = open("um-deliveries-20140519.txt")
 day_2 = open("um-deliveries-20140520.txt")
 day_3 = open("um-deliveries-20140521.txt")
 
+delivery_days = [day_1, day_2, day_3]
 
 '''FUNCTIONS'''
 def get_delivery_info(the_file):
@@ -19,17 +20,23 @@ def get_delivery_info(the_file):
             count, melon, amount))
     the_file.close()
 
+def get_daily_delivery_info(delivery_days):
+    for day in delivery_days:
+        print (day)
+        get_delivery_info(day)
 
 
-print("Day 1")
-get_delivery_info(day_1)
+get_daily_delivery_info(delivery_days)
 
-print()
+# print("Day 1")
+# get_delivery_info(day_1)
 
-print("Day 2")
-get_delivery_info(day_2)
+# print()
 
-print()
+# print("Day 2")
+# get_delivery_info(day_2)
 
-print("Day 3")
-get_delivery_info(day_3)
+# print()
+
+# print("Day 3")
+# get_delivery_info(day_3)
