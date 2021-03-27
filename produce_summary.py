@@ -8,7 +8,7 @@ delivery_days = [day_1, day_2, day_3]
 '''FUNCTIONS'''
 def get_delivery_info(the_file):
     '''single function to call for delivery info, when passing in the day's file via defined variable''' 
-    for line in the_file:
+    for line in (the_file):
         line = line.rstrip()
         words = line.split('|') #define element separation by presence of "|"
 
@@ -23,7 +23,7 @@ def get_delivery_info(the_file):
 def get_daily_delivery_info(delivery_days):
     "function that produces delivery info for each day, given a single list of days"
     counter = 1    #counter so that header will change to respective day each time code is looped
-    for day in delivery_days:
+    for day in (delivery_days):
         print (f"Day {counter}:")
         get_delivery_info(day)  #call previous function that pulls deliver data for single day
         counter += 1   #adjust counter for next loop/header
